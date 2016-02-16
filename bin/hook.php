@@ -57,23 +57,6 @@ $config = Zend_Registry::get('general_config');
 
 if ($paneltype == "PLESK")
 {
-	$data = argv2array( $argv );
-    $action = (isset($data['action']) ? $data['action'] : '');
-
-	// Get the domain to execute actions on.
-	$domain = $data['domain'];
-
-	switch($action)
-	{
-		case "editdomain":
-			$newdomain = $domain;
-		break;
-
-		case "addaddondomain";
-		case "deladdondomain":
-			$alias = $data['alias'];
-		break;
-	}
 } else {
     $in = file_get_contents("php://stdin");
     if (!empty($in)) { // Cpanel: STDIN used       
