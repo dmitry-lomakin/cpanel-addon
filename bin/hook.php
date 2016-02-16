@@ -262,7 +262,6 @@ switch( $action )
                 }
             }
         } else {
-            Zend_Registry::get('logger')->debug("[Hook] Empty user or domain supplied so there's nothing to restore");
             return false;
         }
 
